@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{4723F98C-C74F-4C0B-9D8D-2E95B1B2F717}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <LangVersion>8.0</LangVersion>
+    <AssemblyName>AElf.Contracts.MultiToken</AssemblyName>
+    <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Runtime">
+      <HintPath>C:\Program Files (x86)\dotnet\shared\Microsoft.NETCore.App\3.1.2\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>C:\Users\Administrator\AElf\DllInputs\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="AElf.Types">
+      <HintPath>C:\Users\Administrator\AElf\DllInputs\AElf.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="AElf.CSharp.Core">
+      <HintPath>C:\Users\Administrator\AElf\DllInputs\AElf.CSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="AElf.Sdk.CSharp">
+      <HintPath>C:\Users\Administrator\AElf\DllInputs\AElf.Sdk.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>C:\Program Files (x86)\dotnet\shared\Microsoft.NETCore.App\3.1.2\System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>C:\Program Files (x86)\dotnet\shared\Microsoft.NETCore.App\3.1.2\System.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="AElf.Kernel.SmartContract.Shared" />
+    <Reference Include="System.Private.CoreLib">
+      <HintPath>C:\Program Files (x86)\dotnet\shared\Microsoft.NETCore.App\3.1.2\System.Private.CoreLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AElf.Contracts.Association\AssociationContractContainer.cs" />
+    <Compile Include="AElf.Contracts.Association\AssociationContractReflection.cs" />
+    <Compile Include="AElf.Contracts.Association\ChangeMemberInput.cs" />
+    <Compile Include="AElf.Contracts.Association\CreateOrganizationBySystemContractInput.cs" />
+    <Compile Include="AElf.Contracts.Association\CreateOrganizationInput.cs" />
+    <Compile Include="AElf.Contracts.Association\MemberAdded.cs" />
+    <Compile Include="AElf.Contracts.Association\MemberChanged.cs" />
+    <Compile Include="AElf.Contracts.Association\MemberRemoved.cs" />
+    <Compile Include="AElf.Contracts.Association\Organization.cs" />
+    <Compile Include="AElf.Contracts.Association\OrganizationMemberList.cs" />
+    <Compile Include="AElf.Contracts.Association\ProposalInfo.cs" />
+    <Compile Include="AElf.Contracts.Configuration\ConfigurationContainer.cs" />
+    <Compile Include="AElf.Contracts.Configuration\ConfigurationContractReflection.cs" />
+    <Compile Include="AElf.Contracts.Configuration\ConfigurationSet.cs" />
+    <Compile Include="AElf.Contracts.Configuration\SetConfigurationInput.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\AEDPoSContractContainer.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\AedposContractReflection.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\AElfConsensusBehaviour.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\AElfConsensusHeaderInformation.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\AElfConsensusHint.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\AElfConsensusTriggerInformation.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\Candidates.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\ConsensusInformation.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\GetMinerListInput.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\HashList.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\InitialAElfConsensusContractInput.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\IrreversibleBlockFound.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\IrreversibleBlockHeightUnacceptable.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\LatestPubkeyToTinyBlocksCount.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\MinerInRound.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\MinerList.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\MinerListWithRoundNumber.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\MinerReplaced.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\MiningInformationUpdated.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\MiningRewardGenerated.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\NextRoundInput.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\NextTermInput.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\PubkeyList.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\RandomNumberRequestInformation.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\RecordCandidateReplacementInput.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\Round.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\SecretSharingInformation.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\TermInfo.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\TermNumberLookUp.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\TinyBlockInput.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\UpdateValueInput.cs" />
+    <Compile Include="AElf.Contracts.Consensus.AEDPoS\VoteMinersCountInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\AdvanceResourceTokenInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\AllCalculateFeeCoefficients.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\Approved.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\ApproveInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\Burned.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\BurnInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\CalculateFeeAlgorithmUpdated.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\CalculateFeeCoefficients.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\CalculateFeePieceCoefficients.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\CallbackInfo.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\ChainPrimaryTokenSymbolSet.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\ChangeTokenIssuerInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\ChargeResourceTokenInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\ChargeTransactionFeesInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\ChargeTransactionFeesOutput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\CheckThresholdInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\ConfigTransactionFeeFreeAllowance.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\ConfigTransactionFeeFreeAllowancesInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\ContractTotalResourceTokens.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\CreateInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\CrossChainCreateTokenInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\CrossChainReceived.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\CrossChainReceiveTokenInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\CrossChainTransferInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\CrossChainTransferred.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\DelegateInfo.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\DelegateTransaction.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\DelegateTransactionList.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\DeveloperFeeController.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\ExternalInfo.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\ExternalInfoChanged.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\ExtraTokenListModified.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\FeeTypeEnum.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\GetAllowanceInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\GetAllowanceOutput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\GetBalanceInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\GetBalanceOutput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\GetCrossChainTransferTokenContractAddressInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\GetLockedAmountInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\GetLockedAmountOutput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\GetTokenInfoInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\GetTransactionFeeDelegateeListInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\GetTransactionFeeDelegateeListOutput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\GetTransactionFeeDelegateesInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\GetTransactionFeeDelegateesOutput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\GetTransactionFeeDelegateInfoInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\GetTransactionFeeDelegationsOfADelegateeInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\GetTransactionFeeFreeAllowancesConfigOutput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\GetVirtualAddressForLockingInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\InitializeFromParentChainInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\IsInWhiteListInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\Issued.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\IssueInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\LockInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\MethodFeeFreeAllowance.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\MethodFeeFreeAllowances.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\MethodFeeFreeAllowancesConfig.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\OwningRental.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\OwningRentalUnitValue.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\RegisterCrossChainTokenContractAddressInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\RemoveTransactionFeeDelegateeInfosInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\RemoveTransactionFeeDelegateeInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\RemoveTransactionFeeDelegatorInfosInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\RemoveTransactionFeeDelegatorInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\RemoveTransactionFeeFreeAllowancesConfigInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\RentalAccountBalanceInsufficient.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\RentalCharged.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\ResetExternalInfoInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\ResourceTokenCharged.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\ResourceTokenClaimed.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\ResourceTokenOwned.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\ResourceUsage.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\SetPrimaryTokenSymbolInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\SetTransactionFeeDelegateInfosInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\SetTransactionFeeDelegationsInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\SetTransactionFeeDelegationsOutput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\StringList.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\SymbolListToPayTxSizeFee.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\SymbolToPayTxSizeFee.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\SymbolType.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TakeResourceTokenBackInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TokenContract.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TokenContractConstants.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TokenContractImplContainer.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TokenContractImplReflection.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TokenContractReflection.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TokenContractState.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TokenCreated.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TokenInfo.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TokenInfoList.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TotalResourceTokensMap.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TotalResourceTokensMaps.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TotalTransactionFeesMap.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TransactionFeeBill.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TransactionFeeCharged.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TransactionFeeClaimed.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TransactionFeeDelegatees.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TransactionFeeDelegateInfoAdded.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TransactionFeeDelegateInfoCancelled.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TransactionFeeDelegateInfoUpdated.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TransactionFeeDelegationAdded.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TransactionFeeDelegationCancelled.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TransactionFeeDelegations.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TransactionFeeFreeAllowance.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TransactionFeeFreeAllowanceConfig.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TransactionFeeFreeAllowanceMap.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TransactionFeeFreeAllowances.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TransactionFeeFreeAllowancesMap.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TransactionFeeFreeAllowancesSymbolList.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TransactionFeeReflection.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TransactionFreeFeeAllowanceBill.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TransactionSizeFeeSymbol.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TransactionSizeFeeSymbols.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TransferFromInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TransferInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\Transferred.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\TransferToContractInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\UnApproved.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\UnApproveInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\UnlockInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\UpdateCoefficientsInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\UpdateRentalInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\UpdateRentedResourcesInput.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\UserFeeController.cs" />
+    <Compile Include="AElf.Contracts.MultiToken\ValidateTokenInfoExistsInput.cs" />
+    <Compile Include="AElf.Contracts.Parliament\CreateOrganizationBySystemContractInput.cs" />
+    <Compile Include="AElf.Contracts.Parliament\CreateOrganizationInput.cs" />
+    <Compile Include="AElf.Contracts.Parliament\InitializeInput.cs" />
+    <Compile Include="AElf.Contracts.Parliament\Organization.cs" />
+    <Compile Include="AElf.Contracts.Parliament\ParliamentContractContainer.cs" />
+    <Compile Include="AElf.Contracts.Parliament\ParliamentContractReflection.cs" />
+    <Compile Include="AElf.Contracts.Parliament\ProposalIdList.cs" />
+    <Compile Include="AElf.Contracts.Parliament\ProposalInfo.cs" />
+    <Compile Include="AElf.Contracts.Referendum\CreateOrganizationBySystemContractInput.cs" />
+    <Compile Include="AElf.Contracts.Referendum\CreateOrganizationInput.cs" />
+    <Compile Include="AElf.Contracts.Referendum\Organization.cs" />
+    <Compile Include="AElf.Contracts.Referendum\ProposalInfo.cs" />
+    <Compile Include="AElf.Contracts.Referendum\Receipt.cs" />
+    <Compile Include="AElf.Contracts.Referendum\ReferendumContractContainer.cs" />
+    <Compile Include="AElf.Contracts.Referendum\ReferendumContractReflection.cs" />
+    <Compile Include="AElf.Contracts.Referendum\ReferendumReceiptCreated.cs" />
+    <Compile Include="AElf.Standards.ACS0\ACS0Container.cs" />
+    <Compile Include="AElf.Standards.ACS0\Acs0Reflection.cs" />
+    <Compile Include="AElf.Standards.ACS0\AuthorUpdated.cs" />
+    <Compile Include="AElf.Standards.ACS0\CodeCheckRequired.cs" />
+    <Compile Include="AElf.Standards.ACS0\CodeUpdated.cs" />
+    <Compile Include="AElf.Standards.ACS0\ContractCodeCheckInput.cs" />
+    <Compile Include="AElf.Standards.ACS0\ContractCodeHashList.cs" />
+    <Compile Include="AElf.Standards.ACS0\ContractCodeHashMap.cs" />
+    <Compile Include="AElf.Standards.ACS0\ContractDeployed.cs" />
+    <Compile Include="AElf.Standards.ACS0\ContractDeploymentInput.cs" />
+    <Compile Include="AElf.Standards.ACS0\ContractInfo.cs" />
+    <Compile Include="AElf.Standards.ACS0\ContractOperation.cs" />
+    <Compile Include="AElf.Standards.ACS0\ContractProposed.cs" />
+    <Compile Include="AElf.Standards.ACS0\ContractUpdateInput.cs" />
+    <Compile Include="AElf.Standards.ACS0\DeployUserSmartContractOutput.cs" />
+    <Compile Include="AElf.Standards.ACS0\ReleaseContractInput.cs" />
+    <Compile Include="AElf.Standards.ACS0\SetContractAuthorInput.cs" />
+    <Compile Include="AElf.Standards.ACS0\SystemContractDeploymentInput.cs" />
+    <Compile Include="AElf.Standards.ACS0\UserContractDeploymentInput.cs" />
+    <Compile Include="AElf.Standards.ACS0\UserContractUpdateInput.cs" />
+    <Compile Include="AElf.Standards.ACS0\ValidateSystemContractAddressInput.cs" />
+    <Compile Include="AElf.Standards.ACS10\Acs10Reflection.cs" />
+    <Compile Include="AElf.Standards.ACS10\DividendPoolContractContainer.cs" />
+    <Compile Include="AElf.Standards.ACS10\Dividends.cs" />
+    <Compile Include="AElf.Standards.ACS10\DonateInput.cs" />
+    <Compile Include="AElf.Standards.ACS10\DonationReceived.cs" />
+    <Compile Include="AElf.Standards.ACS10\ReleaseInput.cs" />
+    <Compile Include="AElf.Standards.ACS10\SymbolList.cs" />
+    <Compile Include="AElf.Standards.ACS12\Acs12Reflection.cs" />
+    <Compile Include="AElf.Standards.ACS12\UserContractContainer.cs" />
+    <Compile Include="AElf.Standards.ACS12\UserContractMethodFee.cs" />
+    <Compile Include="AElf.Standards.ACS12\UserContractMethodFees.cs" />
+    <Compile Include="AElf.Standards.ACS1\Acs1Reflection.cs" />
+    <Compile Include="AElf.Standards.ACS1\MethodFee.cs" />
+    <Compile Include="AElf.Standards.ACS1\MethodFees.cs" />
+    <Compile Include="AElf.Standards.ACS2\Acs2Reflection.cs" />
+    <Compile Include="AElf.Standards.ACS2\ResourceInfo.cs" />
+    <Compile Include="AElf.Standards.ACS3\Acs3Reflection.cs" />
+    <Compile Include="AElf.Standards.ACS3\AuthorizationContractContainer.cs" />
+    <Compile Include="AElf.Standards.ACS3\CreateProposalBySystemContractInput.cs" />
+    <Compile Include="AElf.Standards.ACS3\CreateProposalInput.cs" />
+    <Compile Include="AElf.Standards.ACS3\OrganizationCreated.cs" />
+    <Compile Include="AElf.Standards.ACS3\OrganizationHashAddressPair.cs" />
+    <Compile Include="AElf.Standards.ACS3\OrganizationThresholdChanged.cs" />
+    <Compile Include="AElf.Standards.ACS3\OrganizationWhiteListChanged.cs" />
+    <Compile Include="AElf.Standards.ACS3\ProposalCreated.cs" />
+    <Compile Include="AElf.Standards.ACS3\ProposalOutput.cs" />
+    <Compile Include="AElf.Standards.ACS3\ProposalReleased.cs" />
+    <Compile Include="AElf.Standards.ACS3\ProposalReleaseThreshold.cs" />
+    <Compile Include="AElf.Standards.ACS3\ProposerWhiteList.cs" />
+    <Compile Include="AElf.Standards.ACS3\ReceiptCreated.cs" />
+    <Compile Include="AElf.Standards.ACS3\ValidateProposerInWhiteListInput.cs" />
+    <Compile Include="AElf.Standards.ACS7\ACS7Container.cs" />
+    <Compile Include="AElf.Standards.ACS7\Acs7Reflection.cs" />
+    <Compile Include="AElf.Standards.ACS7\AdjustIndexingFeeInput.cs" />
+    <Compile Include="AElf.Standards.ACS7\ChainIdAndHeightDict.cs" />
+    <Compile Include="AElf.Standards.ACS7\ChainInitializationConsensusInfo.cs" />
+    <Compile Include="AElf.Standards.ACS7\ChainInitializationData.cs" />
+    <Compile Include="AElf.Standards.ACS7\ChainPrimaryTokenInfo.cs" />
+    <Compile Include="AElf.Standards.ACS7\CreateSideChainInput.cs" />
+    <Compile Include="AElf.Standards.ACS7\CrossChainBlockData.cs" />
+    <Compile Include="AElf.Standards.ACS7\CrossChainExtraData.cs" />
+    <Compile Include="AElf.Standards.ACS7\CrossChainIndexingDataProposedEvent.cs" />
+    <Compile Include="AElf.Standards.ACS7\CrossChainMerkleProofContext.cs" />
+    <Compile Include="AElf.Standards.ACS7\IndexedParentChainBlockData.cs" />
+    <Compile Include="AElf.Standards.ACS7\IndexedSideChainBlockData.cs" />
+    <Compile Include="AElf.Standards.ACS7\ParentChainBlockData.cs" />
+    <Compile Include="AElf.Standards.ACS7\RechargeInput.cs" />
+    <Compile Include="AElf.Standards.ACS7\ReleaseCrossChainIndexingProposalInput.cs" />
+    <Compile Include="AElf.Standards.ACS7\ReleaseSideChainCreationInput.cs" />
+    <Compile Include="AElf.Standards.ACS7\ResourceTokenInfo.cs" />
+    <Compile Include="AElf.Standards.ACS7\SideChainBlockData.cs" />
+    <Compile Include="AElf.Standards.ACS7\SideChainBlockDataIndexed.cs" />
+    <Compile Include="AElf.Standards.ACS7\SideChainCreationRequest.cs" />
+    <Compile Include="AElf.Standards.ACS7\SideChainIndexingInformation.cs" />
+    <Compile Include="AElf.Standards.ACS7\SideChainIndexingInformationList.cs" />
+    <Compile Include="AElf.Standards.ACS7\SideChainTokenCreationRequest.cs" />
+    <Compile Include="AElf.Standards.ACS7\SideChainTokenInitialIssue.cs" />
+    <Compile Include="AElf.Standards.ACS7\VerifyTransactionInput.cs" />
+    <Compile Include="AuthorityInfo.cs" />
+    <Compile Include="AuthorityInfoReflection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
